@@ -88,10 +88,8 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 #navigate workspaces next / previous
-bindsym $mod+Right workspace next
-# bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Left workspace prev
-# bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
 
 # change focus
 bindsym $mod+j focus left
@@ -100,10 +98,10 @@ bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-# bindsym $mod+Left focus left
+bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-# bindsym $mod+Right focus right
+bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -277,7 +275,7 @@ for_window [class="Viewnior"] floating enable
 for_window [class="Pulseeffects"] floating enable
 
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s or x) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
